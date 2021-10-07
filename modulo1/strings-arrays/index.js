@@ -31,4 +31,3 @@ const valor = array[i+6]
 console.log('f. ', valor)
 
 //9
-
