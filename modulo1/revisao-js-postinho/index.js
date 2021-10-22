@@ -50,8 +50,18 @@ console.log(verificaSeEMaior(a, b));
 const cadastro = () => {
     const usuario = []
 
-    //  Sua lógica aqui
+    const usuario1 = {
+        nome: "Joao",
+        idade: 23,
+        senha: "030498",
+        nacionalidade: "brasileira"
+    }
 
+    if(usuario1.idade > 18 && usuario1.senha.length >= 6 && usuario1.nacionalidade.toLowerCase() === "brasileira") {
+        usuarios.push(usuario1)
+    }
+
+    return usuarios
 }
 console.log(cadastro());
 
@@ -59,7 +69,14 @@ console.log(cadastro());
 
 const login = () => {
     const login = "labenu"
-    //  Sua lógica aqui
+
+    const login = () => {
+    const login = "labenu"
+
+    const senha = prompt("Informe a sua senha: ")
+
+    if(senha === login) console.log("Usuario Logado")  
+    else console.log("Senha invalida")
 
 }
 
@@ -69,7 +86,30 @@ console.log(login());
 
 const primeiraDose = () => {
 
-    //  Sua lógica aqui
+    let tempo = 0
+    let data = new Date()
+    
+
+    const nome = "Joao"
+    const vacina = "pfizer"
+
+    if(vacina.toLowerCase() === "coronavac") {
+        tempo = 28
+    } else if (vacina.toLowerCase() === "astrazenica"){
+        tempo = 90
+    } else if(vacina.toLowerCase() === "pfizer") {
+        tempo = 90
+    }
+
+    const hoje = data.getTime()
+
+    const milissegundos1dia = 86400000
+
+    const dataFormatada = dataAtualizada.toLocaleDateString("pt-br")
+    
+    const dataAtualizada = new Date(hoje + (tempo * milissegundos1dia))
+    
+    return `Olá ${nome}! A próxima dose da ${vacina} é daqui a ${tempo} dias. Compareça no posto na data ${dataFormatada}.`
 
 
 }
@@ -87,8 +127,8 @@ const segundaDose = (nomeDoUsuario) => {
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
 
-    //  Sua lógica aqui
-
+    for (let i = 0 ; i < usuarios.lenght ; i++){
+        console.log(usuarios[i])
 
 }
 console.log(segundaDose("Barbara"));
@@ -100,9 +140,14 @@ const avisoAosAtrasados = () => {
         { nome: "Artur", imunizacao: "incompleta" },
         { nome: "Barbara", imunizacao: "completa" },
         { nome: "Carlos", imunizacao: "incompleta" }
+
     ]
 
-    //  Sua lógica aqui
+        if( === ) console.log("Vacinacao Completa")  {
+
+         } else console.log("Vacinaao Incompleta")
+
+    `Olá ${n.nome}! Sua imunização está ${n.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`
 
 }
 console.log(avisoAosAtrasados());
