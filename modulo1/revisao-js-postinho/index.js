@@ -143,17 +143,27 @@ const avisoAosAtrasados = () => {
 
     ]
 
-        if( === ) console.log("Vacinacao Completa")  {
+        const atRasado = usuarios.filter((pessoa)=>{
+                if(pessoa.imunizacao === "incompleta"){
+                return true
+    }
+    
+    })
 
-         } else console.log("Vacinaao Incompleta")
+      atRasado.map((pessoa)=>{
+         console.log(`Olá ${pessoa.nome}! Sua imunização está ${pessoa.imunizacao}, 
+         por favor volte ao postinho para tomar a segunda dose.`)
+     })
 
-    `Olá ${n.nome}! Sua imunização está ${n.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`
+
 
 }
 console.log(avisoAosAtrasados());
 
 
 // DESAFIO------------------------------------------------------------------------------------------
+
+// EXERCÍCIO 4 REFATORADO
 
 const usuarios = [
     {
@@ -182,6 +192,20 @@ const usuarios = [
     }
 
 ]
+
+    const login = prompt("senha")
+
+    for (let usuario of usuarios) {
+        if (login === usuario.senha) {
+            console.log("Usuario Logado!")
+        } else {
+            console.log("Senha Invalida!")
+        }
+    }
+
+    return login
+};
+ console.log(login());
 
 const cadastroDesafio = () => {
     //  Sua lógica aqui
