@@ -4,8 +4,8 @@ Refatore a função para o Typescript.*/
 
 
 function checaTriangulo(a, b, c) {
-  
 
+  
     const a:string = process.argv[2]
     const b:string = process.argv[3]
     const a:string = process.argv[2]
